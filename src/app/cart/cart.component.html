@@ -1,0 +1,52 @@
+<h4 class="page-header">Sepetim</h4>
+    
+    <!-- <table class="table table-responsive" *ngIf="cartItems.length>0;else cartEmptyContent">
+      <thead>
+        <tr>
+          <th>Ürün Adı</th>
+          <th>Birim Fiyatı</th>
+          <th>Sepetteki Ürün Adedi</th>
+          <th>Toplam Fiyat</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cartItem of cartItems">
+          <td>{{cartItem.product.productName}}</td>
+          <td>{{cartItem.product.unitPrice}} TL</td>
+          <td>{{cartItem.quantity}}</td>
+          <td>{{cartItem.product.unitPrice*cartItem.quantity}} TL</td>
+          <td>
+            <button class="btn btn-xs btn-danger" (click)="removeFromCart(cartItem.product)">
+              remove from cart
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table> -->
+
+    <table class="table">
+        <thead>
+          <tr>
+                  <th>Ürün Adı</th>
+                  <th>Birim Fiyatı</th>
+                  <th>Sepetteki Ürün Adedi</th>
+                  <th>Toplam Fiyat</th>
+                  <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cartItem of cartItems">
+                  <td>{{cartItem.product.productName}}</td>
+                  <td>{{cartItem.product.unitPrice}} TL</td>
+                  <td>{{cartItem.quantity}}</td>
+                  <td>{{cartItem.product.unitPrice*cartItem.quantity}} TL</td>
+                  <td>
+                    <button class="btn btn-xs btn-danger" (click)="removeFromCart(cartItem.product)">
+                      remove from cart
+                    </button>
+                  </td>
+          </tr>
+        </tbody>
+      </table>
+    

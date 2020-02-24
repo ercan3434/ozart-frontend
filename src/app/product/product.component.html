@@ -1,0 +1,42 @@
+         <main role="main">
+
+            <!-- <section class="jumbotron text-center">
+              <div class="container">
+                <h1>OZ | ART</h1>
+            <p class="lead text-muted">OZ | ART
+              Ekolojik farkındalığı yüksek, %100 el emeği ile üretim yapan bir sosyal girişimcilik markası. OZ | ART ekolojik farkındalıkla, zincirdışı üretim yapmak ve ilham vermek niyetiyle yola çıktı. Çevreye duyarlı üretimimizle ve kadın üreticilere adil istihdam fırsatları yaratma misyonumuzla tanınmayı arzu ediyoruz. Ekolojik farkındalığı yüksek estetik tasarımlarımız ve feng shui'den aldığımız ilhamla üretimlerimizi gerçekleştiriyoruz.</p>
+          </div> 
+            </section> -->
+        
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <!-- <app-category></app-category> -->
+           
+          <div class="m-0">
+            <input type="text" class="form-control w-50" placeholder="Ürün Arama . . ." aria-label="Arama" aria-describedby="button-addon2" [(ngModel)]="filterText">
+          </div>
+      
+            <div class="row mt-5" >
+              <div class="col-md-4" *ngFor="let product of products|productFilter:filterText">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">{{product.productName}}</h5>
+                    <p class="card-text">STOK : 100 Adet</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a><strong class="text-success">{{product.unitPrice}} TL</strong></a>
+                        
+                      </div>
+                      <button class="btn btn-outline-success" (click)="addToCart(product)"><i class="fas fa-plus"></i>    Sepete Ekle</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </main>
+      
+
+
